@@ -1,1 +1,3 @@
 /* css file */
+tr:nth-child(even) {background: #FFFFFF}
+tr:nth-child(odd) {background: #d2e8c5}
