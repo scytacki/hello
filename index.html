@@ -9,12 +9,18 @@
         <link rel="stylesheet" media="screen" href="css/main.css">
     </head>
     <body>
-        Hello
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        Hello
+        <audio id='french-demo' src="sounds/french-demo.mp3">
+        </audio>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/French_flag.jpg" style="width:100px; cursor: pointer"
+          onclick="document.getElementById('french-demo').play()"
+        >
+        <button onclick="document.getElementById('french-demo').pause()">Pause the Audio</button>
 
         <!-- Don't need it yet...
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
