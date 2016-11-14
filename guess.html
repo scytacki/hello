@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hello</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" media="screen" href="css/main.css">
+
+        <script>
+          function checkAnswer() {
+            document.getElementById("feedback").innerHTML = "Wrong!";
+          }
+
+        </script>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <table>
+            <tr>
+                <td class="langtitle" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_en').play()"
+                    >Play "Hello"
+                </td>
+                <td class="langtitle"  align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_en').play()"
+                    >Play "Thank You"
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr class="guess" width="100%">
+                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">English</td>
+                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">Spanish</td>
+                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">Italian</td>
+                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">French</td>
+                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">German</td>
+                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Russian</td>
+            </tr>
+            <tr class="guess">
+                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Portuguese</td>
+                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Haitian Creole</td>
+                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Arabic</td>
+                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Tibetan</td>
+                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Punjabi</td>
+            </tr>
+        </table>
+        <p class="feedback" id="feedback"></p>
+
+        <audio id='hello_arabic' src="sounds/hello_arabic.mp3"></audio>
+        <audio id='hi_arabic' src="sounds/hi_arabic.mp3"></audio>
+        <audio id='thanks_arabic' src="sounds/thanks_arabic.mp3"></audio>
+        <audio id='hello_en' src="sounds/hello_en.mp3"></audio>
+        <audio id='thanks_en' src="sounds/thanks_en.mp3"></audio>
+        <audio id='hello_french' src="sounds/hello_french.mp3"></audio>
+        <audio id='thanks_french' src="sounds/thanks_french.mp3"></audio>
+        <audio id='hello_german' src="sounds/hello_german.mp3"></audio>
+        <audio id='thanks_german' src="sounds/thanks_german.mp3"></audio>
+        <audio id='hello_haitiancreole' src="sounds/hello_haitiancreole.mp3"></audio>
+        <audio id='thanks_haitiancreole' src="sounds/thanks_haitiancreole.mp3"></audio>
+        <audio id='hello_italian' src="sounds/hello_italian.mp3"></audio>
+        <audio id='thanks_italian' src="sounds/thanks_italian.mp3"></audio>
+        <audio id='hello_portuguese' src="sounds/hello_portuguese.mp3"></audio>
+        <audio id='thanks_portuguese' src="sounds/thanks_portuguese.mp3"></audio>
+        <audio id='hello_punjabi' src="sounds/hello_punjabi.mp3"></audio>
+        <audio id='thanks_punjabi' src="sounds/thanks_punjabi.mp3"></audio>
+        <audio id='hello_russian' src="sounds/hello_russian.mp3"></audio>
+        <audio id='thanks_russian' src="sounds/thanks_russian.mp3"></audio>
+        <audio id='hello_es' src="sounds/hello_es.mp3"></audio>
+        <audio id='thanks_es' src="sounds/thanks_es.mp3"></audio>
+        <audio id='hello_tibetan' src="sounds/hello_tibetan.wav"></audio>
+        <audio id='thanks_tibetan' src="sounds/thanks_tibetan.wav"></audio>
+
+        <!-- Don't need it yet...
+        <button onclick="document.getElementById('french-demo').pause()">Pause the Audio</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+         -->
+    </body>
+</html>
