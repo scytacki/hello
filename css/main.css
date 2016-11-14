@@ -1,6 +1,7 @@
 /* css file */
-tr:nth-child(even) {background: #FFFFFF}
-tr:nth-child(odd) {background: #e6f1e0}
+tr.sp:nth-child(even) {background: #FFFFFF}
+tr.sp:nth-child(odd) {background: #e6f1e0}
+tr.guess {background: #aadd88}
 td {
     height: 80px;
 }
@@ -10,4 +11,8 @@ table {
 td.langtitle {
   color: #BB0000;
   font-size: 1.5em;
+}
+p.feedback {
+  color: #DD0000;
+  font-size: 3em;
 }
