@@ -9,9 +9,6 @@
         <link rel="stylesheet" media="screen" href="css/main.css">
 
         <script>
-          function checkAnswer() {
-            document.getElementById("feedback").innerHTML = "Wrong!";
-          }
 
         </script>
 
@@ -25,63 +22,102 @@
 
         <table>
             <tr>
-                <td class="langtitle" align="center"  style="cursor: pointer"
-                    onclick="document.getElementById('hello_en').play()"
+                <td id="play_hello" class="langtitle" align="center"  style="cursor: pointer"
                     >Play "Hello"
                 </td>
-                <td class="langtitle"  align="center"  style="cursor: pointer"
-                    onclick="document.getElementById('thanks_en').play()"
+                <td id="play_thankyou" class="langtitle"  align="center"  style="cursor: pointer"
                     >Play "Thank You"
                 </td>
             </tr>
         </table>
-        <table width="100%">
+        <table id='choices' width="100%">
             <tr class="guess" width="100%">
-                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">English</td>
-                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">Spanish</td>
-                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">Italian</td>
-                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">French</td>
-                <td class="langtitle" width="16%" align="center" style="cursor: pointer" onclick="checkAnswer()">German</td>
-                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Russian</td>
+                <td data-lang='english' class="langtitle" width="16%" align="center" style="cursor: pointer" >English</td>
+                <td data-lang='spanish' class="langtitle" width="16%" align="center" style="cursor: pointer" >Spanish</td>
+                <td data-lang='italian' class="langtitle" width="16%" align="center" style="cursor: pointer" >Italian</td>
+                <td data-lang='french' class="langtitle" width="16%" align="center" style="cursor: pointer" >French</td>
+                <td data-lang='german' class="langtitle" width="16%" align="center" style="cursor: pointer" >German</td>
+                <td data-lang='russian' class="langtitle" align="center" style="cursor: pointer" >Russian</td>
             </tr>
             <tr class="guess">
-                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Portuguese</td>
-                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Haitian Creole</td>
-                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Arabic</td>
-                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Tibetan</td>
-                <td class="langtitle" align="center" style="cursor: pointer" onclick="checkAnswer()">Punjabi</td>
+                <td data-lang='portuguese' class="langtitle" align="center" style="cursor: pointer" >Portuguese</td>
+                <td data-lang='h-creole' class="langtitle" align="center" style="cursor: pointer" >Haitian Creole</td>
+                <td data-lang='arabic' class="langtitle" align="center" style="cursor: pointer" >Arabic</td>
+                <td data-lang='tibetan' class="langtitle" align="center" style="cursor: pointer" >Tibetan</td>
+                <td data-lang='punjabi' class="langtitle" align="center" style="cursor: pointer" >Punjabi</td>
             </tr>
         </table>
         <p class="feedback" id="feedback"></p>
 
-        <audio id='hello_arabic' src="sounds/hello_arabic.mp3"></audio>
-        <audio id='hi_arabic' src="sounds/hi_arabic.mp3"></audio>
-        <audio id='thanks_arabic' src="sounds/thanks_arabic.mp3"></audio>
-        <audio id='hello_en' src="sounds/hello_en.mp3"></audio>
-        <audio id='thanks_en' src="sounds/thanks_en.mp3"></audio>
-        <audio id='hello_french' src="sounds/hello_french.mp3"></audio>
-        <audio id='thanks_french' src="sounds/thanks_french.mp3"></audio>
-        <audio id='hello_german' src="sounds/hello_german.mp3"></audio>
-        <audio id='thanks_german' src="sounds/thanks_german.mp3"></audio>
-        <audio id='hello_haitiancreole' src="sounds/hello_haitiancreole.mp3"></audio>
-        <audio id='thanks_haitiancreole' src="sounds/thanks_haitiancreole.mp3"></audio>
-        <audio id='hello_italian' src="sounds/hello_italian.mp3"></audio>
-        <audio id='thanks_italian' src="sounds/thanks_italian.mp3"></audio>
-        <audio id='hello_portuguese' src="sounds/hello_portuguese.mp3"></audio>
-        <audio id='thanks_portuguese' src="sounds/thanks_portuguese.mp3"></audio>
-        <audio id='hello_punjabi' src="sounds/hello_punjabi.mp3"></audio>
-        <audio id='thanks_punjabi' src="sounds/thanks_punjabi.mp3"></audio>
-        <audio id='hello_russian' src="sounds/hello_russian.mp3"></audio>
-        <audio id='thanks_russian' src="sounds/thanks_russian.mp3"></audio>
-        <audio id='hello_es' src="sounds/hello_es.mp3"></audio>
-        <audio id='thanks_es' src="sounds/thanks_es.mp3"></audio>
-        <audio id='hello_tibetan' src="sounds/hello_tibetan.wav"></audio>
-        <audio id='thanks_tibetan' src="sounds/thanks_tibetan.wav"></audio>
+        <div id='hello-audios'>
+          <audio data-lang='arabic' id='hello_arabic' src="sounds/hello_arabic.mp3"></audio>
+          <audio data-lang='arabic' id='hi_arabic' src="sounds/hi_arabic.mp3"></audio>
+          <audio data-lang='english' class='hello en' id='hello_en' src="sounds/hello_en.mp3"></audio>
+          <audio data-lang='french' id='hello_french' src="sounds/hello_french.mp3"></audio>
+          <audio data-lang='german' id='hello_german' src="sounds/hello_german.mp3"></audio>
+          <audio data-lang='h-creole' id='hello_haitiancreole' src="sounds/hello_haitiancreole.mp3"></audio>
+          <audio data-lang='italian' id='hello_italian' src="sounds/hello_italian.mp3"></audio>
+          <audio data-lang='portuguese' id='hello_portuguese' src="sounds/hello_portuguese.mp3"></audio>
+          <audio data-lang='punjabi' id='hello_punjabi' src="sounds/hello_punjabi.mp3"></audio>
+          <audio data-lang='russian' id='hello_russian' src="sounds/hello_russian.mp3"></audio>
+          <audio data-lang='spanish' id='hello_es' src="sounds/hello_es.mp3"></audio>
+          <audio data-lang='tibetan' id='hello_tibetan' src="sounds/hello_tibetan.wav"></audio>
+        </div>
 
-        <!-- Don't need it yet...
-        <button onclick="document.getElementById('french-demo').pause()">Pause the Audio</button>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-         -->
+        <div id='thanks-audios'>
+          <audio data-lang='arabic' id='thanks_arabic' src="sounds/thanks_arabic.mp3"></audio>
+          <audio data-lang='english' id='thanks_en' src="sounds/thanks_en.mp3"></audio>
+          <audio data-lang='french' id='thanks_french' src="sounds/thanks_french.mp3"></audio>
+          <audio data-lang='german' id='thanks_german' src="sounds/thanks_german.mp3"></audio>
+          <audio data-lang='h-creole' id='thanks_haitiancreole' src="sounds/thanks_haitiancreole.mp3"></audio>
+          <audio data-lang='italian' id='thanks_italian' src="sounds/thanks_italian.mp3"></audio>
+          <audio data-lang='portuguese' id='thanks_portuguese' src="sounds/thanks_portuguese.mp3"></audio>
+          <audio data-lang='punjabi' id='thanks_punjabi' src="sounds/thanks_punjabi.mp3"></audio>
+          <audio data-lang='russian' id='thanks_russian' src="sounds/thanks_russian.mp3"></audio>
+          <audio data-lang='spanish' id='thanks_es' src="sounds/thanks_es.mp3"></audio>
+          <audio data-lang='tibetan' id='thanks_tibetan' src="sounds/thanks_tibetan.wav"></audio>
+        </div>
+
+        <script  src="https://code.jquery.com/jquery-3.1.1.js"
+                 integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+                 crossorigin="anonymous"></script>
+
+        <script>
+         jQuery.fn.random = function(){
+           var randomIndex = Math.floor(Math.random() * this.length);
+           return jQuery(this[randomIndex]);
+         };
+
+         var CURRENT_AUDIO;
+         function playAudio($audioDiv) {
+           $audioElement = $audioDiv.children('audio:not([data-played])').random();
+           if($audioElement.length === 0) {
+             $audioDiv.children('audio').removeAttr('data-played');
+             $audioElement = $audioDiv.children('audio:not([data-played])').random();
+           }
+           $audioElement.attr('data-played', 'true');
+           CURRENT_AUDIO = $audioElement[0]
+           CURRENT_AUDIO.play();
+           $('#feedback').html("");
+           console.log("playing: " + $(CURRENT_AUDIO).data('lang'))
+         }
+
+         $('#play_hello').click(function(){
+            playAudio($('#hello-audios'));
+         });
+         $('#play_thankyou').click(function(){
+           playAudio($('#thanks-audios'));
+         });
+
+         $('#choices').find('td').click(function(){
+            if($(this).data('lang') == $(CURRENT_AUDIO).data('lang')){
+                $('#feedback').html("Correct");
+            } else {
+                $('#feedback').html("Wrong");
+            }
+         });
+
+        </script>
+
     </body>
 </html>
