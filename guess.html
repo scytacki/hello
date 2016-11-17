@@ -289,32 +289,36 @@
            $audioElement[0].play();
          }
 
-         $('#play_hello').click(function(){
-            playAudio($('#hello-audios'));
-         });
-         $('#play_thankyou').click(function(){
-           playAudio($('#thanks-audios'));
-         });
+         $(function(){
+           $('#play_hello').click(function(){
+              playAudio($('#hello-audios'));
+           });
+           $('#play_thankyou').click(function(){
+             playAudio($('#thanks-audios'));
+           });
 
-         $('#choices').find('td').click(function(){
-           if (CURRENT_LANG){
-            if($(this).data('lang') == CURRENT_LANG){
-                $('#feedback').html("Correct!");
-                $answerTable = $('#lang_answers').children('[data-lang='+CURRENT_LANG+']');
-                $answerTable.show();
-                console.log(CURRENT_LANG);
-            } else {
-                $('#feedback').html("Wrong. Try again!");
+           $('#choices').find('td').click(function(){
+             if (CURRENT_LANG){
+              if($(this).data('lang') == CURRENT_LANG){
+                  $('#feedback').html("Correct!");
+                  $answerTable = $('#lang_answers').children('[data-lang='+CURRENT_LANG+']');
+                  $answerTable.show();
+                  console.log(CURRENT_LANG);
+              } else {
+                  $('#feedback').html("Wrong. Try again!");
+              }
             }
-          }
+           });
+
+           $('#start_over').click(function(){
+             $('#feedback').html("");
+             CURRENT_LANG = null;
+             //Hide all answers
+             $('#lang_answers').children().hide();
+           });
+
          });
 
-         $('#start_over').click(function(){
-           $('#feedback').html("");
-           CURRENT_LANG = null;
-           //Hide all answers
-           $('#lang_answers').children().hide();
-         });
 
         </script>
 
