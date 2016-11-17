@@ -20,16 +20,23 @@
 
         <!-- Add your site or application content here -->
 
-        <table>
+        <p>
+          Listen to "Hello" and "Thank You" and guess the language!
+        </p>
+        <table width="100%">
             <tr>
-                <td id="play_hello" class="langtitle" align="center"  style="cursor: pointer"
-                    >Play "Hello"
+              <td width="20%"></td>
+                <td width="20%" id="play_hello" class="playtitle" align="center"  style="cursor: pointer"
+                    >Say "Hello"
                 </td>
-                <td id="play_thankyou" class="langtitle"  align="center"  style="cursor: pointer"
-                    >Play "Thank You"
+                <td width="20%"></td>
+                <td width="20%" id="play_thankyou" class="playtitle"  align="center"  style="cursor: pointer"
+                    >Say "Thank You"
                 </td>
+                <td width="20%"></td>
             </tr>
         </table>
+        <p></p>
         <table id='choices' width="100%">
             <tr class="guess" width="100%">
                 <td data-lang='english' class="langtitle" width="16%" align="center" style="cursor: pointer" >English</td>
@@ -49,9 +56,180 @@
         </table>
         <p class="feedback" id="feedback"></p>
 
+        <div id='lang_answers'>
+        <table data-lang="english" style="display:none;">
+          <tr>
+                <td class="langtitle">English</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_en').play()"
+                    >Hello
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_en').play()"
+                    >Thank You
+			          </td>
+            </tr>
+        </table>
+        <table data-lang="arabic" style="display:none;">
+          <tr>
+                <td class="langtitle">Arabic</td>
+                <td class="langwords">
+
+                    <img src="images/hello_arabic.jpg" style="cursor: pointer"
+                      onclick="document.getElementById('hello_arabic').play()"
+                    >
+                    <img src="images/hi_arabic.jpg" style="cursor: pointer"
+                      onclick="document.getElementById('hi_arabic').play()"
+                    >
+                </td>
+                <td class="langwords">
+                    <img src="images/thanks_arabic.jpg" style="cursor: pointer"
+                      onclick="document.getElementById('thanks_arabic').play()"
+                    >
+			          </td>
+            </tr>
+          </table>
+          <table data-lang="french" style="display:none;">
+            <tr>
+                <td class="langtitle">French</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_french').play()"
+                    >Bonjour
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_french').play()"
+                    >Merci
+			          </td>
+            </tr>
+          </table>
+          <table data-lang="tibetan" style="display:none;">
+            <tr>
+                <td class="langtitle">Tibetan</td>
+                <td class="langwords" align="center">
+                  <img src="images/hello_tibetan.jpg" style="cursor: pointer"
+                    onclick="document.getElementById('hello_tibetan').play()"
+                  >
+                </td>
+                <td class="langwords" align="center">
+                  <img src="images/thanks_tibetan.jpg" style="cursor: pointer"
+                    onclick="document.getElementById('thanks_tibetan').play()"
+                  >
+                </td>
+            </tr>
+          </table>
+          <table data-lang="italian" style="display:none;">
+            <tr>
+                <td class="langtitle">Italian</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_italian').play()"
+                    >Ciao
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_italian').play()"
+                    >Grazie
+			          </td>
+            </tr>
+          </table>
+          <table data-lang="h-creole" style="display:none;">
+            <tr>
+                <td class="langtitle">Haitian Creole</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_haitiancreole').play()"
+                    >Bonjou
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_haitiancreole').play()"
+                    >Mesi
+			          </td>
+            </tr>
+          </table>
+          <table data-lang="portuguese" style="display:none;">
+            <tr>
+                <td class="langtitle">Portuguese</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_portuguese').play()"
+                    >Olá
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_portuguese').play()"
+                    >Obrigado
+			          </td>
+            </tr>
+          </table>
+          <table data-lang="punjabi" style="display:none;">
+            <tr>
+                <td class="langtitle">Punjabi</td>
+                <td class="langwords" align="center">
+                  <img src="images/hello_punjabi.jpg" style="cursor: pointer"
+                    onclick="document.getElementById('hello_punjabi').play()"
+                  >
+                </td>
+                <td class="langwords" align="center">
+                  <img src="images/thanks_punjabi.jpg" style="cursor: pointer"
+                    onclick="document.getElementById('thanks_punjabi').play()"
+                  >
+                </td>
+            </tr>
+          </table>
+          <table data-lang="spanish" style="display:none;">
+            <tr>
+                <td class="langtitle">Spanish</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_es').play()"
+                    >Hola
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_es').play()"
+                    >Gracias
+			          </td>
+            </tr>
+          </table>
+          <table data-lang="russian" style="display:none;">
+            <tr>
+                <td class="langtitle">Russian</td>
+                <td class="langwords" align="center">
+                  <img src="images/hello_russian.jpg" style="cursor: pointer"
+                    onclick="document.getElementById('hello_russian').play()"
+                  >
+                </td>
+                <td class="langwords" align="center">
+                  <img src="images/thanks_russian.jpg" style="cursor: pointer"
+                    onclick="document.getElementById('thanks_russian').play()"
+                  >
+                </td>
+            </tr>
+          </table>
+          <table data-lang="german" style="display:none;">
+            <tr>
+                <td class="langtitle">German</td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('hello_german').play()"
+                    >Hallo
+                </td>
+                <td class="langwords" align="center"  style="cursor: pointer"
+                    onclick="document.getElementById('thanks_german').play()"
+                    >Danke
+			          </td>
+            </tr>
+        </table>
+      </div>
+
+      <table width="100%">
+          <tr>
+            <td width="20%"></td>
+            <td width="20%"></td>
+              <td width="20%" id="start_over" class="playtitle" align="center"  style="cursor: pointer"
+                  >Try another Language
+              </td>
+              <td width="20%"></td>
+              <td width="20%"></td>
+          </tr>
+      </table>
+
+        <audio data-lang='arabic' id='hi_arabic' src="sounds/hi_arabic.mp3"></audio>
+
         <div id='hello-audios'>
           <audio data-lang='arabic' id='hello_arabic' src="sounds/hello_arabic.mp3"></audio>
-          <audio data-lang='arabic' id='hi_arabic' src="sounds/hi_arabic.mp3"></audio>
           <audio data-lang='english' class='hello en' id='hello_en' src="sounds/hello_en.mp3"></audio>
           <audio data-lang='french' id='hello_french' src="sounds/hello_french.mp3"></audio>
           <audio data-lang='german' id='hello_german' src="sounds/hello_german.mp3"></audio>
@@ -88,18 +266,27 @@
            return jQuery(this[randomIndex]);
          };
 
-         var CURRENT_AUDIO;
+         var CURRENT_LANG = null;
          function playAudio($audioDiv) {
-           $audioElement = $audioDiv.children('audio:not([data-played])').random();
-           if($audioElement.length === 0) {
-             $audioDiv.children('audio').removeAttr('data-played');
-             $audioElement = $audioDiv.children('audio:not([data-played])').random();
+           var $audioElement;
+           if(CURRENT_LANG){
+             $audioElement = $audioDiv.children('[data-lang='+CURRENT_LANG+']');
            }
-           $audioElement.attr('data-played', 'true');
-           CURRENT_AUDIO = $audioElement[0]
-           CURRENT_AUDIO.play();
-           $('#feedback').html("");
-           console.log("playing: " + $(CURRENT_AUDIO).data('lang'))
+           else{
+             //Selecting a new language
+             $audioElement = $audioDiv.children('audio:not([data-played])').random();
+             if($audioElement.length === 0) {
+               $('audio').removeAttr('data-played');
+               $audioElement = $audioDiv.children('audio:not([data-played])').random();
+             }
+             CURRENT_LANG = $audioElement.data('lang');
+
+             //$audioElement.attr('data-played', 'true');
+             //This set true in both audio sets
+             $('audio[data-lang='+CURRENT_LANG+']').attr('data-played', 'true');
+           }
+           console.log(CURRENT_LANG);
+           $audioElement[0].play();
          }
 
          $('#play_hello').click(function(){
@@ -110,11 +297,23 @@
          });
 
          $('#choices').find('td').click(function(){
-            if($(this).data('lang') == $(CURRENT_AUDIO).data('lang')){
-                $('#feedback').html("Correct");
+           if (CURRENT_LANG){
+            if($(this).data('lang') == CURRENT_LANG){
+                $('#feedback').html("Correct!");
+                $answerTable = $('#lang_answers').children('[data-lang='+CURRENT_LANG+']');
+                $answerTable.show();
+                console.log(CURRENT_LANG);
             } else {
-                $('#feedback').html("Wrong");
+                $('#feedback').html("Wrong. Try again!");
             }
+          }
+         });
+
+         $('#start_over').click(function(){
+           $('#feedback').html("");
+           CURRENT_LANG = null;
+           //Hide all answers
+           $('#lang_answers').children().hide();
          });
 
         </script>
